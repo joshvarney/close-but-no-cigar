@@ -10,3 +10,13 @@ def cigar(num,winnum)
 	counter
 end
 
+
+def cigar_array(mytickarray,winningtick)
+	return_array = []
+	mytickarray.each do |ticket|
+		return_array << cigar(ticket, winningtick)
+	end
+return_array
+end
+
+
