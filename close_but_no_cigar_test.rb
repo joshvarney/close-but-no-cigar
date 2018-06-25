@@ -10,8 +10,12 @@ class TestClose_but_no_cigar < Minitest::Test
 		assert_equal(Integer,cigar("", "").class)
 	end
 	def test_assert_that_returns_1
-		assert_equal(1,cigar("", ""))
+		assert_equal(1,cigar("1234", "1567"))
 	end
-	
+	def test_assert_that_returns_3
+		num = "1234"
+		winnum = "1034"
+		assert_equal(3,cigar(num, winnum))
+	end
 	 
  end
