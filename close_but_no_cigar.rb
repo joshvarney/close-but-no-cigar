@@ -1,3 +1,3 @@
 def cigar(num,winnum)
-	0
+	1
 end
