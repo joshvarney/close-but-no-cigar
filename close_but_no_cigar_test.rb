@@ -14,8 +14,8 @@ class TestClose_but_no_cigar < Minitest::Test
 	end
 	def test_assert_that_returns_3
 		myticket = "1234"
-		winnum = "1034"
-		assert_equal(1,cigar(myticket, winnum))
+		winningtick = "1034"
+		assert_equal(1,cigar(myticket, winningtick))
 	end
 	def test_assert_that_returns_a_string
 		assert_equal([0,2,2], cigar_array(["1234", "1222", "1245"], "1234"))

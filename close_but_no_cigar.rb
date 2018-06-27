@@ -1,11 +1,11 @@
 
 
-def cigar(myticket,winnum)
+def cigar(myticket,winningtick)
 	myticket = myticket.split("")
-	winnum = winnum.split("")
+	winningtick = winningtick.split("")
 	counter = 0
 	myticket.each_with_index do |ticket, index|
-		unless ticket == winnum[index]
+		unless ticket == winningtick[index]
 			counter += 1
 		end
 end
