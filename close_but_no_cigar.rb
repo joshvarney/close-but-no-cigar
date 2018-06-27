@@ -40,7 +40,7 @@ def winarr(mytickarray,winningtick)
 		new_arr = Array.new
 		new_arr << warr
 		new_arr << off_by
-		p new_arr
+		new_arr
 end
 
 
