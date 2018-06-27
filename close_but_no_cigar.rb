@@ -9,16 +9,15 @@ def cigar(myticket,winnum)
 			counter += 1
 		end
 end
-	 	    counter	    
+	counter	    
 end
-
 
 def cigar_array(mytickarray,winningtick)
 	return_array = []
 	mytickarray.each do |ticket|
 		return_array << cigar(ticket, winningtick)
 	end
-  return_array
+  	return_array
 end
 
 def winarr(mytickarray,winningtick)
@@ -35,14 +34,11 @@ def winarr(mytickarray,winningtick)
 			end 
 			  winners
 		end
-		warr << winners
-		warr
+			warr << winners
 	end
 	warr = warr.sort
 	warr << off_by.sort
-
 	warr
-
 end
 
 
