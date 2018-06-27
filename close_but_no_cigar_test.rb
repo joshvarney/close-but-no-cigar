@@ -20,7 +20,11 @@ class TestClose_but_no_cigar < Minitest::Test
 	def test_assert_that_returns_a_string
 		assert_equal([0,2,2], cigar_array(["1234", "1222", "1245"], "1234"))
 	end
-	 def test_asser_if_alltickets_equal_winning_ticket
-	 	assert_equal([2, 1], winarr(["1234", "1234", "1247", "1255"], ["1234", "1247"]))
+	def test_assert_if_returns_equal_winning_ticket
+	 	assert_equal([2, 1, [2, 2, 2, 2, 2]], winarr(["1234", "1234", "1247", "1255"], ["1234", "1247"]))
 	end
+	def test_assert_that_winning
+		assert_equal([1, [4, 4]], winarr(["1234", "4567", "4567"], ["1234"]))
+	end
+
   end
