@@ -1,27 +1,51 @@
-winnum = "1234"
+
 
 def cigar(myticket,winnum)
 	myticket = myticket.split("")
 	winnum = winnum.split("")
 	counter = 0
-	myticket.each_with_index do |n, i|
-		if n == winnum[i]
+	myticket.each_with_index do |ticket, index|
+		unless ticket == winnum[index]
 			counter += 1
-		end
+			
+			
 	end
-	counter
+end
+	 	    counter 	    
 end
 
 
-def cigar_array(mytickarray,winnum)
+def cigar_array(mytickarray,winningtick)
 	return_array = []
 	mytickarray.each do |ticket|
-		return_array.push cigar(ticket, winnum)
+		return_array << cigar(ticket, winningtick)
 	end
-return_array
+  return_array
 end
 
-def more_tickets(other, winnum)
+def winarr(mytickarray,winningtick)
+	warr = []
 
+	winningtick.each do |ticket|
+		matches = cigar_array(mytickarray, ticket)
+		winners = 0
+		matches.each_with_index do |m|
+			if m == 0
+				winners += 1
+			end
+		end
+		warr << winners
 	end
+	p warr
+	
+end
+
+
+
+
+
+
+
+
+
 
