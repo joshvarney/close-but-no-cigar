@@ -32,13 +32,16 @@ def winarr(mytickarray,winningtick)
 				winners += 1
 			elsif 
 				off_by << m
-				
-			end
+			end 
+			  winners
 		end
 		warr << winners
+		warr
 	end
-	warr << off_by
-	p warr
+	warr = warr.sort
+	warr << off_by.sort
+
+	warr
 
 end
 
